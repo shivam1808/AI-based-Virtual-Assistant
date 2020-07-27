@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="iconPath">
+    <file>speak.jpg</file>
+    <file>logo.png</file>
+    <file>send.png</file>
+    <file>info.png</file>
+    <file>giphy.gif</file>
+    <file>mic2.jpg</file>
+    <file>send2.jpg</file>
+    <file>85e8fb5bd7897610782929cd285c7c33.jpg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,15 @@
+numpy
+nltk
+tensorflow==1.15
+tflearn
+wolframalpha
+wikipedia
+file_search
+gtts
+playsound
+pyttsx3
+pyqt5
+youtube-search
+pyaudio
+twilio
+SpeechRecognition
