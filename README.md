@@ -18,6 +18,24 @@ These chatbots derive from a form of artificial intelligence called __Natural La
 We connect our virtual assistant to __sqlite database__ so that execution of commands or instruction can be done very easily.
 We used different __python libraries__ such as speech_recognition, Wikipedia, wolframalpha, file_search, etc. for the purpose to attain automation.
 
+## Requirements:
+
+-> Ananconda Navigator
+-> Make sure you install these packages before moving forward to other python libraries-
+
+`sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools`
+
+You can run `pip install -r requirements.txt` to install them all.
+
+## Installation:
+
+`conda create -n env_name python==3.6` : Create a python3.6 environment for better compatibilty with other libraries.
+
+You can run `pip install -r requirements.txt` to install them all.
+
+Run `python start.py` : to start the virtual assistant
+
+
 ## Conclusion: 
 We have built an Artificial Intelligence based Virtual Assistant for both Linux and Windows with the integration of sqlite database, NLP and TFLearn.
 
