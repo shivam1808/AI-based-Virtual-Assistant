@@ -15,13 +15,16 @@ from weather import check_weather
 from calculator import calculator
 from send_text import sending_text
 from games import play_game
+from location import get_location
+from nearby import search_near
+from direction import directions
 
 from send_email import sending_mail
 from reminder_start import remind
 
 from AIBot import response
 from help_task import help
-
+from umbrella_need import umbrella
 
 def  process(query):
 
@@ -35,6 +38,7 @@ def  process(query):
 		return random.choice(noAnswer)
 
 	if "quit" in query:
+		umbrella()
 		output("Thank You!!! See You Soon")
 		exit()
 	
@@ -50,6 +54,9 @@ def  process(query):
 
 	elif 'weather' in query:
 		answer = get_answer_from_memory("weather")
+
+	elif 'location' in query:
+		answer = get_answer_from_memory("location")
 
 	elif 'search' in query:
 		answer = get_answer_from_memory("search")
@@ -191,8 +198,15 @@ def  process(query):
 		return get_news()
 
 	elif answer == "weather":
-		place = query.split()
-		return check_weather(place[1])
+		place = query.replace('weather ', '')
+		return check_weather(place)
+
+	elif answer == "location":
+		return get_location()
+
+	elif answer == "nearby":
+		query = query.replace('nearby ', '')
+		return search_near(query)
 
 	elif answer == 'calculate':
 		return calculator(query)
@@ -204,6 +218,16 @@ def  process(query):
 		os.system(cmd)
 		return "Opening Google Map"
 
+	
+	elif answer == "direction":
+		output("Start location (if current location leave blank)")
+		start_place = take_input() 
+		output("Destination")
+		end_place = take_input()
+		if start_place == None:
+			return directions(end_place)
+		else:
+			return directions(end_place, start_place)
 
 	elif answer == "mail":
 		name = query.replace("send mail to ", "")

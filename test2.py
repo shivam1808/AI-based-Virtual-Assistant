@@ -1,12 +1,13 @@
-import re
-import wikipedia
+import imdb
+from colorama import Fore
 
-command = "tell me about modi"
-reg_ex = re.search('tell me about (.*)', command)
-try:
-    if reg_ex:
-        topic = reg_ex.group(1)
-        ny = wikipedia.page(topic)
-        print(ny.content[:500].encode('utf-8'))
-except Exception as e:
-        print(e)
+app = imdb.IMDb()
+movie = "war"
+results = app.search_movie(movie, results=10)
+first = results[0]
+data = first.movieID
+print(first.movieID)
+
+print(app.get_movie(first.movieID))
+
+print(data['year'])
