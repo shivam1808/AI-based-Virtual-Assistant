@@ -70,6 +70,23 @@ def get_last_seen():
 	return str(cur.fetchall()[0][0])
 
 
+def update_last_modify(last_modify):
+	con = create_connection()
+	cur = con.cursor()
+	query = "update memory set value='"+str(last_modify)+"' where name = 'last_modify' "
+	cur.execute(query)
+	con.commit()
+
+
+def get_last_modify():
+	con = create_connection()
+	cur = con.cursor()
+	query = "SELECT value from memory where name = 'last_modify'"
+	cur.execute(query)
+
+	return str(cur.fetchall()[0][0])
+
+
 def turn_on_speech():
 
 	if check_internet_connection:

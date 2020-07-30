@@ -7,6 +7,7 @@ import assistant_details as ad
 from database import listen_is_on
 from listen_module import listen
 import AssistantGUI as gui
+from automatic import check_last_modify
 
 from pathlib import Path
 my_file = Path("setup.py")
@@ -44,6 +45,7 @@ def installation():
 if my_file.is_file():
     #Welcome message
 	status = setup.status
+	check_last_modify()
 	welcome.greet(status)
 	while(True):
 		if listen_is_on():

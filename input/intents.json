@@ -55,7 +55,7 @@
         "context_filter": ""
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "patterns": ["what is your name", "what should I call you", "whats your name?", "your name"],
          "responses": ["You can call me Assistant", "I'm your Assistant!", "I'm AI based Assistant."],
          "context_set": ""
         },

@@ -12,6 +12,7 @@ class Ui_MainWindow(object):
         MainWindow.setStyleSheet("background: url(85e8fb5bd7897610782929cd285c7c33.jpg)")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(190, 10, 231, 31))
         font = QtGui.QFont()
@@ -23,6 +24,7 @@ class Ui_MainWindow(object):
         self.label.setFrameShadow(QtWidgets.QFrame.Raised)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
+
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(10, 470, 471, 101))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -33,8 +35,9 @@ class Ui_MainWindow(object):
         self.textEdit.setStyleSheet("background: rgb(255, 255, 255)")
         self.textEdit.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
         self.textEdit.setObjectName("textEdit")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
 
+
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         font_button = QtGui.QFont()
         font_button.setFamily("Algerian")
         font_button.setPointSize(10)
@@ -102,14 +105,9 @@ class Ui_MainWindow(object):
         mytext = self.textEdit.toPlainText() 
         self.textEdit_2.append("Me: " + mytext)
         self.textEdit.setText("")
-        return mytext
-    
-    def output_fun(self, mytext):
         res = process(mytext)
         self.textEdit_2.append(assistant_details.name + ": " + res)
-        self.textEdit_2.append("")
-        output(res)
-        
+        self.textEdit_2.append("")        
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

@@ -79,9 +79,8 @@ def  process(query):
 			output("Enter date(like 21 july)")
 			date = take_input()
 			res = 'remind me to ' + msg + 'at ' + time + 'on ' + date
-			cmd = 'pythonw reminder.py "' + res + '" &'
-			remind(res)
-			return "Reminder Set"
+			
+			return remind(res)
 
 		else:
 			msg = "Alarm"
@@ -198,7 +197,7 @@ def  process(query):
 		return get_news()
 
 	elif answer == "weather":
-		place = query.replace('weather ', '')
+		place = query.replace('weather', '')
 		return check_weather(place)
 
 	elif answer == "location":
@@ -230,7 +229,7 @@ def  process(query):
 			return directions(end_place, start_place)
 
 	elif answer == "mail":
-		name = query.replace("send mail to ", "")
+		name = query.replace("send email to ", "")
 		mail = get_emailId(name)
 		if mail == '0':
 			output("Email Id not found in database, please input mail id")
