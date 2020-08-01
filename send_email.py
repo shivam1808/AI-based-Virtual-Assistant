@@ -12,7 +12,7 @@ def sending_mail(name, rec_email, message):
     # Start the server connection
     server.starttls()
     # Login
-    server.login("virtualassistant.aibot@gmail.com", "aibot@123")
+    server.login("virtualassistant.aibot@gmail.com", "*******")
     print("Login Success!")
     # Send Email
     server.sendmail("Shivam Gupta", rec_email, message)
