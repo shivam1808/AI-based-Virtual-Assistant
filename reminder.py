@@ -58,9 +58,3 @@ def reminder_start(s):
             break
 
 reminder_start(sys.argv[1])
-
-
-
-
-
-
