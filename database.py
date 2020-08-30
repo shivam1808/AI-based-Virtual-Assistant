@@ -1,7 +1,6 @@
 import sqlite3
 from internet import check_internet_connection
 
-
 def create_connection():
 
 	connection = sqlite3.connect('memory.db')
