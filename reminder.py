@@ -3,7 +3,7 @@ import sys
 from time_details import get_date
 from datetime import datetime, date
 import re
-
+ 
 import assistant_details as ad
 
 def get_time():
