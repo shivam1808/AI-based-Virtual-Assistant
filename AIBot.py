@@ -29,7 +29,7 @@ with open('input/intents.json') as json_data:
     intents = json.load(json_data)
 
 tf.reset_default_graph()
-# Build neural network
+# Build neural network 
 net = tflearn.input_data(shape=[None, len(train_x[0])])
 net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, 8)
