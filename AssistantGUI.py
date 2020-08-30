@@ -14,7 +14,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(190, 10, 231, 31))
+        self.label.setGeometry(QtCore.QRect(190, 10, 231, 31)) 
         font = QtGui.QFont()
         font.setFamily("MS Sans Serif")
         font.setPointSize(22)
