@@ -1,6 +1,6 @@
 numpy
 nltk
-tensorflow==2.6.4
+tensorflow==2.11.1
 tflearn
 wolframalpha
 wikipedia
